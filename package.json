@@ -1,0 +1,61 @@
+{
+  "name": "genetics-cs-research",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "engine": {
+    "node": "6.2.2",
+    "npm": ">=3.0.0"
+  },
+  "scripts": {
+    "report-coverage": "node_modules/.bin/nyc report",
+    "coverage": "node_modules/.bin/nyc --reporter cobertura --reporter html --reporter json --require ./spec/bootstrap.js node_modules/.bin/mocha --bail --recursive 'spec/unit'",
+    "coverage-html": "open spec/reports/coverage/index.html",
+    "start": "node --stack-size=65500 lib/app.js",
+    "lint": "node node_modules/eslint/bin/eslint.js 'node_modules/eslint-friendly-formatter' ./spec ./lib",
+    "test": "multi='nyan=- xunit=spec/reports/xunit.xml' npm run unit-test",
+    "unit-test": "node_modules/.bin/mocha --opts ./mocha.opts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozthekoder/genetics-cs-research.git"
+  },
+  "author": "Osman Ozdemir <oozdemir2704@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozthekoder/genetics-cs-research/issues"
+  },
+  "homepage": "https://github.com/ozthekoder/genetics-cs-research#readme",
+  "nyc": {
+    "statements": 80,
+    "branches": 80,
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "exclude": [
+      "**/*.spec.js",
+      "**/bootstrap.js"
+    ],
+    "report-dir": "./spec/reports/coverage/"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "hashids": "^1.0.2"
+  },
+  "devDependencies": {
+    "better-npm-run": "0.0.9",
+    "chai": "3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "chai-spies": "0.7.1",
+    "eslint": "1.10.3",
+    "eslint-friendly-formatter": "1.2.2",
+    "faucet": "0.0.1",
+    "husky": "^0.11.4",
+    "mocha": "2.4.5",
+    "mocha-multi": "0.9.0",
+    "nyc": "^6.4.4",
+    "sinon": "1.17.3",
+    "sinon-as-promised": "4.0.0",
+    "sinon-chai": "2.8.0"
+  }
+}

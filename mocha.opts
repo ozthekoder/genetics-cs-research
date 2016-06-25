@@ -1,0 +1,5 @@
+--require spec/bootstrap.js
+--reporter mocha-multi
+
+spec/unit
+--recursive
