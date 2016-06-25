@@ -5,6 +5,7 @@ const Base = require('../../lib/base');
 const Codon = require('../../lib/codon');
 
 describe('Codon Class', () => {
+
   let codon;
 
   beforeEach(() => {
@@ -25,6 +26,13 @@ describe('Codon Class', () => {
     codon = new Codon(['foo', 'bar']);
     expect(hashids.decode(codon.id)).to.deep.equal([2]);
     expect(codon.bases).to.deep.equal(['foo', 'bar']);
+  });
+
+  it('resolves to correct code', () => {
+    const bases = ['A', 'U', 'G']
+    .map((b) => new Base(b));
+    codon = new Codon(bases);
+    expect(codon.code).to.equal('AUG')
   });
 
   it('resolves to correct aminoacid', () => {
@@ -58,9 +66,9 @@ describe('Codon Class', () => {
     it('should return a new instance of Codon that has the correct aminoacid when passed an array of Base objects as a triplet', () => {
       const codon = Codon.generateCodon([new Base('U'), new Base('G'), new Base('U')]);
       expect(codon.aminoacid).to.deep.equal({
-      name: 'Cysteine',
-      codons: ['UGC', 'UGU']
-    });
+        name: 'Cysteine',
+        codons: ['UGC', 'UGU']
+      });
     });
 
   });

@@ -1,12 +1,13 @@
-<testsuite name="Mocha Tests" tests="10" failures="0" errors="0" skipped="0" timestamp="Sat, 25 Jun 2016 18:49:37 GMT" time="0.022">
+<testsuite name="Mocha Tests" tests="11" failures="0" errors="0" skipped="0" timestamp="Sat, 25 Jun 2016 19:53:18 GMT" time="0.025">
 <testcase classname="Base Class" name="should be defined" time="0.003"/>
 <testcase classname="Base Class" name="can be instantiated" time="0.001"/>
-<testcase classname="Codon Class" name="should be defined" time="0"/>
-<testcase classname="Codon Class" name="can be instantiated" time="0.001"/>
-<testcase classname="Codon Class" name="resolves to correct aminoacid" time="0.001"/>
-<testcase classname="Codon Class generateCodon method" name="should return a new instance of Codon that has the correct aminoacid when passed a string of a triplet" time="0.001"/>
+<testcase classname="Codon Class" name="should be defined" time="0.001"/>
+<testcase classname="Codon Class" name="can be instantiated" time="0"/>
+<testcase classname="Codon Class" name="resolves to correct code" time="0"/>
+<testcase classname="Codon Class" name="resolves to correct aminoacid" time="0"/>
+<testcase classname="Codon Class generateCodon method" name="should return a new instance of Codon that has the correct aminoacid when passed a string of a triplet" time="0"/>
 <testcase classname="Codon Class generateCodon method" name="should return a new instance of Codon that has the correct aminoacid when passed an array of strings as a triplet" time="0"/>
-<testcase classname="Codon Class generateCodon method" name="should return a new instance of Codon that has the correct aminoacid when passed an array of Base objects as a triplet" time="0"/>
+<testcase classname="Codon Class generateCodon method" name="should return a new instance of Codon that has the correct aminoacid when passed an array of Base objects as a triplet" time="0.001"/>
 <testcase classname="Constants" name="should be defined" time="0"/>
 <testcase classname="Constants" name="all constants should be defined" time="0.001"/>
 </testsuite>
